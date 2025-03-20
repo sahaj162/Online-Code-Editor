@@ -1,12 +1,25 @@
-import { Box } from "@chakra-ui/react";
-import CodeEditor from "./components/CodeEditor";
-
+// src/App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Box } from '@chakra-ui/react'; // Chakra UI Box component for layout
+import Home from './components/Home'; // Import the Home component
+import WebEditor from './components/WebEditor'; // Import the WebEditor component
+import Chatbot from './components/Chatbot'; // Import the Chatbot component
+import CodeEditor from './components/CodeEditor'; // Import the CodeEditor component
 
 function App() {
   return (
-    <Box minH="100vh" bg="#0f0a19" color="gray.500" px={6} py={8}>
-      <CodeEditor />
-    </Box>
+    <Router>
+      <Box minH="100vh" bg="#0f0a19" color="gray.500">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/web-editor" element={<WebEditor />} />
+          <Route path="/chatbot" element={<Chatbot />} />
+          <Route path="/code-editor" element={<CodeEditor />} /> {/* Route for CodeEditor */}
+        </Routes>
+      </Box>
+    </Router>
   );
 }
 

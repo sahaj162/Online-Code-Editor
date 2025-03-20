@@ -1,0 +1,99 @@
+/* src/components/Chatbot.css */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0e0c1c; /* Very dark blue */
+    color: white;
+  }
+  
+  .chatbot-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100%;
+  }
+  
+  .chatbot-header {
+    background-color: #1a1a2e; /* Darker blue */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .chatbot-body {
+    flex: 1;
+    padding: 20px;
+    background-color: #121212; /* Very dark black */
+    overflow-y: auto;
+  }
+  
+  .chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .message {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 12px;
+    word-wrap: break-word;
+    background-color: #2c3e50; /* Dark blue background for messages */
+    color: white;
+  }
+  
+  .user-message {
+    align-self: flex-end;
+    background-color: #3498db; /* Light blue for user */
+  }
+  
+  .bot-message {
+    align-self: flex-start;
+    background-color: #34495e; /* Darker gray for bot */
+  }
+  
+  .chatbot-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #1a1a2e; /* Matching dark blue footer */
+  }
+  
+  .chatbot-footer input {
+    width: 80%;
+    padding: 10px;
+    background-color: #2c3e50; /* Dark background for input */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .chatbot-footer button {
+    width: 15%;
+    padding: 10px;
+    background-color: #3498db; /* Light blue for the button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chatbot-footer button:hover {
+    background-color: #2980b9; /* Slightly darker blue for hover */
+  }
+  
+  @media (max-width: 768px) {
+    .chatbot-footer input {
+      width: 70%;
+    }
+  
+    .chatbot-footer button {
+      width: 25%;
+    }
+  }
+  
