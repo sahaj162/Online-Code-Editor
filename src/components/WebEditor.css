@@ -1,35 +1,35 @@
-/* WebEditor.css */
-
-/* Basic styling for the web editor layout */
+/* Layout */
 .web-editor {
   display: flex;
   height: 100vh;
-  background-color: #162447; /* Blue background theme */
+  background-color: #000; /* Pure black */
   padding: 20px;
   gap: 16px;
 }
 
+/* Editor Pane */
 .editor-pane {
   width: 50%;
   padding: 16px;
-  background-color: #1a1a2e; /* Darker blue for editor pane */
-  color: #ffffff;
-  border-radius: 10px; /* Curved corners */
+  background-color: #111; /* Dark grey */
+  color: #fff;
+  border-radius: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
+/* Tabs */
 .tabs {
   display: flex;
   margin-bottom: 12px;
-  gap: 8px; /* Add space between the buttons */
+  gap: 8px;
 }
 
 .tabs button {
   flex: 1;
   padding: 12px;
-  background-color: #162447; /* Matching blue for tabs */
+  background-color: #222; /* Darker grey */
   color: #fff;
   border: none;
   cursor: pointer;
@@ -39,59 +39,63 @@
 }
 
 .tabs button:hover {
-  background-color: #1b1b2f; /* Slightly darker blue on hover */
+  background-color: #333;
 }
 
 .tabs button.active {
-  background-color: #0f3460; /* Active tab color */
+  background-color: #444; /* Highlight active tab */
 }
 
+/* Code Editor */
 .code-editor {
   width: 100%;
-  height: calc(100vh - 120px); /* Adjust for tab bar */
-  background-color: #162447; /* Blue background for editor */
-  color: #ffffff;
+  height: calc(100vh - 120px);
+  background-color: #000; /* Pure black */
+  color: #eee;
   border: none;
   padding: 16px;
   font-size: 16px;
   font-family: monospace;
-  border-radius: 5px; /* Curved corners for textareas */
+  border-radius: 5px;
   box-sizing: border-box;
-  resize: none; /* Prevent resizing */
-  overflow: auto; /* Enable scrolling */
+  resize: none;
+  overflow: auto;
 }
 
 .code-editor:focus {
   outline: none;
-  border: 2px solid #0f3460; /* Highlight on focus */
+  border: 2px solid #555; /* Grey border on focus */
 }
 
+/* Output Pane */
 .output-pane {
   width: 50%;
-  background-color: #162447; /* Blue background for the output pane */
-  border-left: 1px solid #ddd;
-  border-radius: 10px; /* Curved corners */
+  background-color: #111;
+  border-left: 1px solid #333;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
 }
 
+/* Iframe Output */
 iframe {
   width: 100%;
   height: 100%;
-  border-radius: 10px; /* Curved corners for iframe */
+  border-radius: 10px;
   border: none;
 }
 
-/* Make sure the editor and output are aligned properly */
+/* Responsive */
 @media (max-width: 1024px) {
   .web-editor {
     flex-direction: column;
     padding: 10px;
   }
 
-  .editor-pane, .output-pane {
+  .editor-pane,
+  .output-pane {
     width: 100%;
   }
 }
